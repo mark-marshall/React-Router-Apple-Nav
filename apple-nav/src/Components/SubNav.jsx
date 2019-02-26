@@ -1,7 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, {  keyframes } from 'styled-components';
 import PT from 'prop-types';
+
+const kf = keyframes`
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 const Navvy = styled.div`
   padding: 1% 5%;
@@ -9,6 +16,9 @@ const Navvy = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  opacity: 0;
+  transform: translateX(50%);
+  animation: ${kf} 0.075s ease-out forwards;
 `;
 
 const NestedNav = styled(NavLink)`
