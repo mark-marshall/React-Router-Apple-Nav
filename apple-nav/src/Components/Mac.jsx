@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PT from 'prop-types';
 import SubNav from './SubNav';
 
 const PageDiv = styled.div`
@@ -13,13 +14,17 @@ const PageDiv = styled.div`
   padding-top: 25%;
 `;
 
-export default function Tv({ navs }) {
+export default function Mac({ navs }) {
   return (
     <div>
-      <SubNav navs={navs} id={5} />
+      <SubNav navs={navs} id={1} />
       <PageDiv>
-        <h1>TV</h1>
+        <h1>Mac</h1>
       </PageDiv>
     </div>
   );
 }
+
+Mac.propTypes = {
+  navs: PT.arrayOf(PT.object.isRequired).isRequired,
+};

@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import PT from 'prop-types';
 
 const Navvy = styled.div`
   padding: 1% 5%;
@@ -33,3 +34,8 @@ export default function SubNav({ navs, id }) {
     </div>
   );
 }
+
+SubNav.propTypes = {
+    navs: PT.array.isRequired,
+    id: PT.number.isRequired,
+  };

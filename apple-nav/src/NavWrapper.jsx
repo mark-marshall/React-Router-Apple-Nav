@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PT from 'prop-types';
 import styled from 'styled-components';
 
 const NavWrap = styled.div`
@@ -26,3 +27,7 @@ export default function NavWrapper({ navs }) {
     </NavWrap>
   );
 }
+
+NavWrapper.propTypes = {
+  navs: PT.arrayOf(PT.object.isRequired).isRequired,
+};

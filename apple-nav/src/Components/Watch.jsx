@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PT from 'prop-types';
 import SubNav from './SubNav';
 
 const PageDiv = styled.div`
@@ -13,13 +14,17 @@ const PageDiv = styled.div`
   padding-top: 25%;
 `;
 
-export default function Music({ navs }) {
+export default function Watch({ navs }) {
   return (
     <div>
-      <SubNav navs={navs} id={6} />
+      <SubNav navs={navs} id={4} />
       <PageDiv>
-        <h1>Music</h1>
+        <h1>Watch</h1>
       </PageDiv>
     </div>
   );
 }
+
+Watch.propTypes = {
+  navs: PT.arrayOf(PT.object.isRequired).isRequired,
+};
