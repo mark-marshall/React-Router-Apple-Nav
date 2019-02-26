@@ -10,12 +10,21 @@ const NavWrap = styled.div`
   justify-content: space-around;
   padding: 1.5% 0%;
   background-color: #313131;
+
+  .active {
+    font-weight: bold;
+    font-size: 13px;
+  }
 `;
 
 const StyledLink = styled(NavLink)`
   color: white;
   font-size: 12px;
   text-decoration: none;
+
+  .active {
+    color: orange;
+  }
 `;
 
 export default function NavWrapper({ navs }) {
