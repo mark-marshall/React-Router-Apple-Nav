@@ -21,6 +21,10 @@ class App extends Component {
   state = {
     navs: [
       {
+        tagged: 'Home',
+        linked: '/',
+      },
+      {
         tagged: 'Mac',
         linked: '/mac',
         childLinked: [
