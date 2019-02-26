@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const PageDiv = styled.div`
   width: 90%;
@@ -12,6 +13,35 @@ const PageDiv = styled.div`
   padding-top: 25%;
 `;
 
-export default function Support() {
-  return <PageDiv>Support</PageDiv>;
+const Navvy = styled.div`
+  padding: 1% 5%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const NestedNav = styled(NavLink)`
+  width: 100px;
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+`;
+
+export default function Support({ navs }) {
+  return (
+    <div>
+      <Navvy>
+        {navs[6].childLinked.map(child => (
+          <NestedNav to={child.toLowerCase().replace(/\s/g, '')} key={child}>
+            {child}
+          </NestedNav>
+        ))}
+      </Navvy>
+      <PageDiv>
+        <h1>Support</h1>
+      </PageDiv>
+    </div>
+  );
 }

@@ -7,12 +7,13 @@ const NavWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: orange;
-  padding: 4% 0%;
+  padding: 1.5% 0%;
+  background-color: #313131;
 `;
 
 const StyledLink = styled(NavLink)`
-  color: black;
+  color: white;
+  font-size: 12px;
   text-decoration: none;
 `;
 

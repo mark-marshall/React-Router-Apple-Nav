@@ -23,7 +23,7 @@ class App extends Component {
       {
         tagged: 'Mac',
         linked: '/mac',
-        childlinked: [
+        childLinked: [
           'MacBook',
           'MacBook Air',
           'MacBook Pro',
@@ -39,7 +39,7 @@ class App extends Component {
       {
         tagged: 'iPad',
         linked: '/ipad',
-        childlinked: [
+        childLinked: [
           'iPad Pro',
           'iPad Pro 10.5',
           'iPad 9.7',
