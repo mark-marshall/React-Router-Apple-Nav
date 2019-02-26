@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styled, {  keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import PT from 'prop-types';
 
 const kf = keyframes`
@@ -46,6 +46,6 @@ export default function SubNav({ navs, id }) {
 }
 
 SubNav.propTypes = {
-    navs: PT.array.isRequired,
-    id: PT.number.isRequired,
-  };
+  navs: PT.array.isRequired,
+  id: PT.number.isRequired,
+};
